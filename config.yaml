@@ -1,0 +1,35 @@
+
+tracking-broker:
+  kafka:
+    address: "127.0.0.1:9092"
+    topic: "tracking-v1-topic"
+    group_id : "tracking-service"
+    auto_offset_reset: "earliest"
+
+timing-broker:
+  kafka:
+    addr: "127.0.0.1:9092"
+    topic: "timer-v1-topic"
+    group_id: "timing-service"
+    auto_offset_reset: "earliest"
+
+system-broker:
+  kafka:
+    addr: "127.0.0.1:9092"
+    topic: "system-v1-topic"
+    group_id: "system-service"
+    auto_offset_reset: "earliest"
+
+ws-server:
+  address : "127.0.0.1:8090"
+  read-buffer-size: 1024
+  write-buffer-size: 1024
+
+redis-cache:
+  address : "127.0.0.1:6379"
+  password : ""
+  db : 0
+  tracking-key: "cache:tracker"
+  drivers-key-format : "cache:drivers:%s"
+  trips-key-format : "cache:running_trips:%s"
+
